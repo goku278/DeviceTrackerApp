@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Screen Time Settings"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- Category Selection Spinner -->
+        <TextView
+            android:text="Select Category"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"/>
+
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@android:drawable/spinner_background"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Limit Input -->
+        <TextView
+            android:text="Daily Time Limit"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/etLimit"
+            android:hint="Enter limit in minutes"
+            android:inputType="number"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:background="@android:drawable/editbox_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Current Limit Display -->
+        <TextView
+            android:id="@+id/tvCurrentLimit"
+            android:text="Current limit: Not set"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btnSave"
+            android:text="Save Limit"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:backgroundTint="@color/design_default_color_primary"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Hint Text -->
+        <TextView
+            android:text="Minimum limit is 5 minutes"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

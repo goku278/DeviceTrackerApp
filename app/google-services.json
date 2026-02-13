@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "902533964836",
+    "project_id": "devicetracker-ca056",
+    "storage_bucket": "devicetracker-ca056.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:902533964836:android:70b5369d5d6c2268be64b1",
+        "android_client_info": {
+          "package_name": "com.ominfo.deviceusagetracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjCIcDAaLhEL2RCT6JGC4YSdbR5Kmg54A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
