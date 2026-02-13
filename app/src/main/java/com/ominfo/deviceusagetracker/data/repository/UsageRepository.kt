@@ -49,27 +49,6 @@ class UsageRepository(
         }
     }
 
-    fun getCategoryDashboardData(): Flow<List<CategoryDashboardModel>> {
-        return combine(
-            getPolicies(),
-            flow { emit(getTodayUsage()) }
-        ) { policies, usage ->
-            val policyMap = policies.associate { it.category to it.dailyLimitMinutes }
-
-            usage.groupBy { it.category }.map { (category, apps) ->
-                val used = apps.sumOf { it.usageMinutes }
-                val limit = policyMap[category] ?: 60
-
-                CategoryDashboardModel(
-                    category = category,
-                    usedMinutes = used,
-                    limitMinutes = limit,
-                    iconRes = Constants.CATEGORY_ICONS[category] ?: R.drawable.ic_default
-                )
-            }
-        }
-    }
-
     suspend fun getCategoryUsage(category: String): List<AppUsageEntity> {
         return usageDao.getUsageByCategory(category, Constants.today())
     }
@@ -85,7 +64,8 @@ class UsageRepository(
                 policyDao.insert(
                     CategoryPolicyEntity(
                         category = category,
-                        dailyLimitMinutes = 60
+//                        dailyLimitMinutes = 60
+                        dailyLimitMinutes = 1440
                     )
                 )
             }

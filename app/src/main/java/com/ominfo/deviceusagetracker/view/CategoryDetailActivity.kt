@@ -38,10 +38,10 @@ class CategoryDetailActivity : AppCompatActivity() {
         // Set toolbar as action bar
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "$category Apps"
+//        supportActionBar?.title = "$category Apps"
 
         // Set category title
-        binding.tvCategoryTitle.text = "$category Apps"
+//        binding.tvCategoryTitle.text = "$category Apps"
 
         // Setup RecyclerView
         adapter = AppUsageAdapter()
